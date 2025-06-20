@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Resume Builder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <h1>Resume</h1>
+        <form>
+            <div class="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Name" required>
+            </div>
+
+            <div class="form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="form">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Phone Number"pattern="[0-9]{10}"required />
+
+            </div>
+
+            <div class="form">
+                <label for="summary">Profile Summary:</label>
+                <textarea id="summary" placeholder="Profile Summary" required></textarea>
+            </div>
+                    
+            <div class="form">
+                <label for="education">Education:</label>
+                <button type="button" id="education">Add Education Details</button>
+            </div>
+                   
+            <div class="form">
+                <label for="experience">Experience:</label>
+                <button type="button" id="experience">Add Experience Details</button>
+            </div>
+
+            <div class="form">
+                <label for="skills">Skills:</label>
+                <button type="button" id="skills">Add Skills</button>
+            </div>
+                    
+                <br>
+                <button type="button" id="clear-form">Clear Form</button>
+        </form>
+
+        <div id="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="preview-content"></div>
+        </div>
+        
+        <br>
+        <button type="button" id="download-resume">Download Resume</button>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
